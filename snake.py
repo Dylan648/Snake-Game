@@ -8,7 +8,7 @@ player_x = 250
 player_y = 250
 player_height = 20
 player_width = 20
-speed = 1
+speed = .5
 
 is_running = True
 
@@ -29,7 +29,7 @@ while is_running:
         player_y += speed
 
     window.fill((0,0,0))    
-    pygame.draw.rect(window, (0,255,0), (player_x, player_x, player_height, player_width))
+    pygame.draw.rect(window, (0,255,0), (player_x, player_y, player_height, player_width))
     pygame.display.update()
 
 pygame.quit()
