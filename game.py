@@ -45,7 +45,7 @@ while is_running:
     if player.colliderect(enemy):
         enemy_speed = 0
         player_speed = 0
-        if event.type == pygame.KEYUP:
+        if event.type == pygame.KEYDOWN:
             if keys[pygame.K_r]:
                 #this doesnt quite work yet, screen needs to update before it actually restarts.
                 score = 0
@@ -55,8 +55,11 @@ while is_running:
                 player_speed = 10
                 player_x = 250
                 player_y = 400
+                pygame.display.update()
     elif score > 5:
         enemy_speed = 15
     elif score > 10:
         enemy_speed = 20
     pygame.display.update()
+
+pygame.quit()
